@@ -1,0 +1,51 @@
+﻿@model IEnumerable<AdmissionFinal.Entity.Student>
+@{
+    ViewBag.Title = "ShowStudentsIndex";
+}
+<div class="page-header">
+    <h2>
+        Students List</h2>
+</div>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Account creation was unsuccessful. Please correct the errors and try again.")
+    <p>
+        Name of Student : @Html.TextBox("searchString")
+        <input type="submit" value="Submit" class="btn btn-primary" />
+    </p>
+}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Department
+            </th>
+            <th>
+                Registration Number
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @item.Name
+                </td>
+                <td>
+                    @item.Department.DepartmentName
+                </td>
+                <td>
+                    @item.RegistrationNumber
+                </td>
+                <td>
+                    @Html.ActionLink("Details", "StudentDetails", new { id = item.StudentId })|
+                    @Html.ActionLink("Edit", "EditStudent", new { id = item.StudentId })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

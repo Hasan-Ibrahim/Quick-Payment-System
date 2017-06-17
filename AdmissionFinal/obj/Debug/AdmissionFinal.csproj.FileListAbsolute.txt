@@ -1,0 +1,40 @@
+c:\users\shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\bin\AdmissionFinal.dll
+c:\users\shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\bin\AdmissionFinal.pdb
+c:\users\shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\bin\EntityFramework.dll
+c:\users\shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\bin\EntityFramework.xml
+c:\users\shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\obj\Debug\AdmissionFinal.csprojResolveAssemblyReference.cache
+c:\users\shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\obj\Debug\AdmissionFinal.dll
+c:\users\shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\obj\Debug\AdmissionFinal.pdb
+C:\Users\Shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\bin\IKVM.Runtime.dll
+C:\Users\Shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\bin\IKVM.AWT.WinForms.dll
+C:\Users\Shuvo\documents\visual studio 2010\Projects\AdmissionFinal\AdmissionFinal\bin\IKVM.Runtime.JNI.dll
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\bin\AdmissionFinal.dll
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\bin\AdmissionFinal.pdb
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\bin\EntityFramework.dll
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\bin\IKVM.Runtime.dll
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\bin\IKVM.AWT.WinForms.dll
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\bin\IKVM.Runtime.JNI.dll
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\bin\EntityFramework.xml
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\obj\Debug\AdmissionFinal.dll
+C:\Users\Atish\Desktop\AdmissionFinal\AdmissionFinal\obj\Debug\AdmissionFinal.pdb
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\bin\AdmissionFinal.dll
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\bin\AdmissionFinal.pdb
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\bin\EntityFramework.dll
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\bin\IKVM.Runtime.dll
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\bin\IKVM.AWT.WinForms.dll
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\bin\IKVM.Runtime.JNI.dll
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\bin\EntityFramework.xml
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\obj\Debug\AdmissionFinal.csprojResolveAssemblyReference.cache
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\obj\Debug\AdmissionFinal.dll
+C:\Users\Shuvo\Desktop\AdmissionFinal\AdmissionFinal\obj\Debug\AdmissionFinal.pdb
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\bin\AdmissionFinal.dll
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\bin\AdmissionFinal.pdb
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\bin\EntityFramework.dll
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\bin\IKVM.Runtime.dll
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\bin\IKVM.AWT.WinForms.dll
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\bin\IKVM.Runtime.JNI.dll
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\bin\EntityFramework.xml
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\obj\Debug\AdmissionFinal.csprojResolveAssemblyReference.cache
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\obj\Debug\AdmissionFinal.dll
+F:\Study Materials\WebTech\projectBackUp\AdmissionFinal2.2\AdmissionFinal\obj\Debug\AdmissionFinal.pdb

@@ -1,0 +1,110 @@
+﻿@model AdmissionFinal.Entity.AdmissionFee
+
+@{
+    ViewBag.Title = "AdmissionFeeEdit";
+}
+<div class="page-header">
+	<h2>@User.Identity.Name</h2>
+</div>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+	@using (Html.BeginForm()) {
+		@Html.ValidationSummary(true)
+		<fieldset>
+			<legend>Edit Admission Fee</legend>
+			<div class="control-group">
+				<div class="controls">
+					@Html.HiddenFor(model => model.AdmissionFeeId)
+				</div>
+			</div>
+			<div class="control-group">
+				@Html.LabelFor(model => model.RegistrationFee)
+				<div class="controls">
+					@Html.EditorFor(model => model.RegistrationFee)
+					@Html.ValidationMessageFor(model => model.RegistrationFee)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.TutionFee)
+				<div class="controls">
+					@Html.EditorFor(model => model.TutionFee)
+					@Html.ValidationMessageFor(model => model.TutionFee)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.TransportFee)
+				<div class="controls">
+					@Html.EditorFor(model => model.TransportFee)
+					@Html.ValidationMessageFor(model => model.TransportFee)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.SportsFee)
+				<div class="controls">
+					@Html.EditorFor(model => model.SportsFee)
+					@Html.ValidationMessageFor(model => model.SportsFee)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.HallUnionFee)
+				<div class="controls">
+					@Html.EditorFor(model => model.HallUnionFee)
+					@Html.ValidationMessageFor(model => model.HallUnionFee)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.StudentWelfareFee)
+				<div class="controls">
+					@Html.EditorFor(model => model.StudentWelfareFee)
+					@Html.ValidationMessageFor(model => model.StudentWelfareFee)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.DevelopmentFee)
+				<div class="controls">
+					@Html.EditorFor(model => model.DevelopmentFee)
+					@Html.ValidationMessageFor(model => model.DevelopmentFee)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.OthersFee)
+				<div class="controls">
+					@Html.EditorFor(model => model.OthersFee)
+					@Html.ValidationMessageFor(model => model.OthersFee)
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					@Html.HiddenFor(model => model.HallId)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.LastDate)
+				<div class="controls">
+					@Html.EditorFor(model => model.LastDate)
+					@Html.ValidationMessageFor(model => model.LastDate)
+				</div>
+			</div>
+
+		<div class="form-actions">
+				<input type="submit" class="btn btn-primary" value="Submit" />
+		</div>
+	</fieldset>
+    
+}
+
+<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>
+

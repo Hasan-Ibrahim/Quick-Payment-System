@@ -1,0 +1,12 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+<div class="page-header">
+    <h2>
+        @User.Identity.Name</h2>
+</div>
+<ul class="nav nav-tabs nav-stacked">
+    <li>@Html.ActionLink("Register Hall", "Register", "Account")</li>
+    <li>@Html.ActionLink("Register Bank","Register","Account")</li>
+    <li>@Html.ActionLink("Register Department","Register","Account")</li>
+</ul>

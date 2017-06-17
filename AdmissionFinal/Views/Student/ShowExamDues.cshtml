@@ -1,0 +1,52 @@
+﻿@model AdmissionFinal.Entity.ExamFee
+
+@{
+    ViewBag.Title = "ShowExamDues";
+    decimal fine = ViewBag.Fine;
+    decimal total = (decimal) (Model.Total + fine); 
+}
+
+<div class="page-header">
+	<h2>ShowExamDues</h2>
+</div>
+
+		<fieldset>
+			<legend>ExamFee</legend>
+			<br />
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.ExamFee1)</div>
+                <div class="span10">@Html.DisplayFor(model => model.ExamFee1)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.CentreFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.CentreFee)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.TranscriptFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.TranscriptFee)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.LastDate)</div>
+                <div class="span10">@Model.LastDate.Date.ToString("dd-MMM-yyyy")</div>
+            </div>
+            
+            <div class="row">
+                <div class="span2">Fine</div>
+                <div class="span10">@fine</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.Total)</div>
+                <div class="span10">@total</div>
+            </div>
+		</fieldset>
+		<br />
+	<p>
+		
+		@Html.ActionLink("Back to List", "Index")
+	</p>
+

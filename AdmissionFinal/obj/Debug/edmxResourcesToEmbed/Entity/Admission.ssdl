@@ -1,0 +1,595 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AdmissionModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="AdmissionModelStoreContainer">
+    <EntitySet Name="AdmissionFee" EntityType="AdmissionModel.Store.AdmissionFee" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Applications" EntityType="AdmissionModel.Store.aspnet_Applications" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Membership" EntityType="AdmissionModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Paths" EntityType="AdmissionModel.Store.aspnet_Paths" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="AdmissionModel.Store.aspnet_PersonalizationAllUsers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="AdmissionModel.Store.aspnet_PersonalizationPerUser" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Profile" EntityType="AdmissionModel.Store.aspnet_Profile" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Roles" EntityType="AdmissionModel.Store.aspnet_Roles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="AdmissionModel.Store.aspnet_SchemaVersions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_Users" EntityType="AdmissionModel.Store.aspnet_Users" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="AdmissionModel.Store.aspnet_UsersInRoles" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="AdmissionModel.Store.aspnet_WebEvent_Events" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Bank" EntityType="AdmissionModel.Store.Bank" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Department" EntityType="AdmissionModel.Store.Department" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExamFee" EntityType="AdmissionModel.Store.ExamFee" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Hall" EntityType="AdmissionModel.Store.Hall" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Student" EntityType="AdmissionModel.Store.Student" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="StudentYearStatus" EntityType="AdmissionModel.Store.StudentYearStatus" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="sysdiagrams" EntityType="AdmissionModel.Store.sysdiagrams" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Transaction" EntityType="AdmissionModel.Store.Transaction" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK__aspnet_Me__Appli__21B6055D" Association="AdmissionModel.Store.FK__aspnet_Me__Appli__21B6055D">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__22AA2996" Association="AdmissionModel.Store.FK__aspnet_Me__UserI__22AA2996">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__5AEE82B9" Association="AdmissionModel.Store.FK__aspnet_Pa__Appli__5AEE82B9">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__628FA481" Association="AdmissionModel.Store.FK__aspnet_Pe__PathI__628FA481">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__68487DD7" Association="AdmissionModel.Store.FK__aspnet_Pe__PathI__68487DD7">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__693CA210" Association="AdmissionModel.Store.FK__aspnet_Pe__UserI__693CA210">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__38996AB5" Association="AdmissionModel.Store.FK__aspnet_Pr__UserI__38996AB5">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__440B1D61" Association="AdmissionModel.Store.FK__aspnet_Ro__Appli__440B1D61">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__0DAF0CB0" Association="AdmissionModel.Store.FK__aspnet_Us__Appli__0DAF0CB0">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__RoleI__4AB81AF0" Association="AdmissionModel.Store.FK__aspnet_Us__RoleI__4AB81AF0">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__UserI__49C3F6B7" Association="AdmissionModel.Store.FK__aspnet_Us__UserI__49C3F6B7">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdmissionFee_Hall" Association="AdmissionModel.Store.FK_AdmissionFee_Hall">
+      <End Role="Hall" EntitySet="Hall" />
+      <End Role="AdmissionFee" EntitySet="AdmissionFee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Bank_aspnet_Users" Association="AdmissionModel.Store.FK_Bank_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Bank" EntitySet="Bank" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Department_aspnet_Users" Association="AdmissionModel.Store.FK_Department_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Department" EntitySet="Department" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ExamFee_Hall" Association="AdmissionModel.Store.FK_ExamFee_Hall">
+      <End Role="Hall" EntitySet="Hall" />
+      <End Role="ExamFee" EntitySet="ExamFee" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hall_aspnet_Users" Association="AdmissionModel.Store.FK_Hall_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Hall" EntitySet="Hall" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_aspnet_Users" Association="AdmissionModel.Store.FK_Student_aspnet_Users">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Department" Association="AdmissionModel.Store.FK_Student_Department">
+      <End Role="Department" EntitySet="Department" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Student_Hall" Association="AdmissionModel.Store.FK_Student_Hall">
+      <End Role="Hall" EntitySet="Hall" />
+      <End Role="Student" EntitySet="Student" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StudentYearStatus_Student" Association="AdmissionModel.Store.FK_StudentYearStatus_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="StudentYearStatus" EntitySet="StudentYearStatus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Transaction_Student" Association="AdmissionModel.Store.FK_Transaction_Student">
+      <End Role="Student" EntitySet="Student" />
+      <End Role="Transaction" EntitySet="Transaction" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AdmissionFee">
+    <Key>
+      <PropertyRef Name="AdmissionFeeId" />
+    </Key>
+    <Property Name="AdmissionFeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RegistrationFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="TutionFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="TransportFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="SportsFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="HallUnionFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="StudentWelfareFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="DevelopmentFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="OthersFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="HallId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastDate" Type="date" Nullable="false" />
+    <Property Name="Total" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNames" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesBinary" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredRoleName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="CompatibleSchemaVersion" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="LoweredUserName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="char" Nullable="false" MaxLength="32" />
+    <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="EventTime" Type="datetime" Nullable="false" />
+    <Property Name="EventType" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="EventSequence" Type="decimal" Nullable="false" Precision="19" />
+    <Property Name="EventOccurrence" Type="decimal" Nullable="false" Precision="19" />
+    <Property Name="EventCode" Type="int" Nullable="false" />
+    <Property Name="EventDetailCode" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="MachineName" Type="nvarchar" Nullable="false" MaxLength="256" />
+    <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+    <Property Name="Details" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Bank">
+    <Key>
+      <PropertyRef Name="BankId" />
+    </Key>
+    <Property Name="BankId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="BankName" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="DepartmentId" />
+    </Key>
+    <Property Name="DepartmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="DepartmentName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="ExamFee">
+    <Key>
+      <PropertyRef Name="ExamFeeId" />
+    </Key>
+    <Property Name="ExamFeeId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="ExamFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="CentreFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="TranscriptFee" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="HallId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="LastDate" Type="date" Nullable="false" />
+    <Property Name="Total" Type="decimal" Scale="2" />
+  </EntityType>
+  <EntityType Name="Hall">
+    <Key>
+      <PropertyRef Name="HallId" />
+    </Key>
+    <Property Name="HallId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HallName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="StudentId" />
+    </Key>
+    <Property Name="StudentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="FatherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="MotherName" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrentAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="PermanentAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="nvarchar" MaxLength="50" />
+    <Property Name="SSCYear" Type="int" />
+    <Property Name="HSCYear" Type="int" />
+    <Property Name="SSCGPA" Type="decimal" Scale="2" />
+    <Property Name="HSCGPA" Type="decimal" Scale="2" />
+    <Property Name="Session" Type="nvarchar" MaxLength="50" />
+    <Property Name="DepartmentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="HallId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RegistrationNumber" Type="nvarchar" Nullable="false" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="StudentYearStatus">
+    <Key>
+      <PropertyRef Name="StudentYearStatusId" />
+    </Key>
+    <Property Name="StudentYearStatusId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StudentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="AdmissionPaid" Type="int" Nullable="false" />
+    <Property Name="Year" Type="int" Nullable="false" />
+    <Property Name="ExamPaid" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" Nullable="false" MaxLength="128" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Transaction">
+    <Key>
+      <PropertyRef Name="TransactionId" />
+    </Key>
+    <Property Name="TransactionId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="StudentId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Amount" Type="decimal" Nullable="false" Scale="2" />
+    <Property Name="Date" Type="datetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__21B6055D">
+    <End Role="aspnet_Applications" Type="AdmissionModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="AdmissionModel.Store.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__22AA2996">
+    <End Role="aspnet_Users" Type="AdmissionModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="AdmissionModel.Store.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__5AEE82B9">
+    <End Role="aspnet_Applications" Type="AdmissionModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="AdmissionModel.Store.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__628FA481">
+    <End Role="aspnet_Paths" Type="AdmissionModel.Store.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="AdmissionModel.Store.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__68487DD7">
+    <End Role="aspnet_Paths" Type="AdmissionModel.Store.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="AdmissionModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__693CA210">
+    <End Role="aspnet_Users" Type="AdmissionModel.Store.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="AdmissionModel.Store.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__38996AB5">
+    <End Role="aspnet_Users" Type="AdmissionModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="AdmissionModel.Store.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__440B1D61">
+    <End Role="aspnet_Applications" Type="AdmissionModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="AdmissionModel.Store.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__0DAF0CB0">
+    <End Role="aspnet_Applications" Type="AdmissionModel.Store.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="AdmissionModel.Store.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__RoleI__4AB81AF0">
+    <End Role="aspnet_Roles" Type="AdmissionModel.Store.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="AdmissionModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__UserI__49C3F6B7">
+    <End Role="aspnet_Users" Type="AdmissionModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="AdmissionModel.Store.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_AdmissionFee_Hall">
+    <End Role="Hall" Type="AdmissionModel.Store.Hall" Multiplicity="1" />
+    <End Role="AdmissionFee" Type="AdmissionModel.Store.AdmissionFee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hall">
+        <PropertyRef Name="HallId" />
+      </Principal>
+      <Dependent Role="AdmissionFee">
+        <PropertyRef Name="HallId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Bank_aspnet_Users">
+    <End Role="aspnet_Users" Type="AdmissionModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="Bank" Type="AdmissionModel.Store.Bank" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Bank">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Department_aspnet_Users">
+    <End Role="aspnet_Users" Type="AdmissionModel.Store.aspnet_Users" Multiplicity="0..1" />
+    <End Role="Department" Type="AdmissionModel.Store.Department" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Department">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_ExamFee_Hall">
+    <End Role="Hall" Type="AdmissionModel.Store.Hall" Multiplicity="1" />
+    <End Role="ExamFee" Type="AdmissionModel.Store.ExamFee" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hall">
+        <PropertyRef Name="HallId" />
+      </Principal>
+      <Dependent Role="ExamFee">
+        <PropertyRef Name="HallId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Hall_aspnet_Users">
+    <End Role="aspnet_Users" Type="AdmissionModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="Hall" Type="AdmissionModel.Store.Hall" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Hall">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_aspnet_Users">
+    <End Role="aspnet_Users" Type="AdmissionModel.Store.aspnet_Users" Multiplicity="1" />
+    <End Role="Student" Type="AdmissionModel.Store.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Department">
+    <End Role="Department" Type="AdmissionModel.Store.Department" Multiplicity="1" />
+    <End Role="Student" Type="AdmissionModel.Store.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Department">
+        <PropertyRef Name="DepartmentId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="DepartmentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Student_Hall">
+    <End Role="Hall" Type="AdmissionModel.Store.Hall" Multiplicity="1" />
+    <End Role="Student" Type="AdmissionModel.Store.Student" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hall">
+        <PropertyRef Name="HallId" />
+      </Principal>
+      <Dependent Role="Student">
+        <PropertyRef Name="HallId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_StudentYearStatus_Student">
+    <End Role="Student" Type="AdmissionModel.Store.Student" Multiplicity="1" />
+    <End Role="StudentYearStatus" Type="AdmissionModel.Store.StudentYearStatus" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="StudentYearStatus">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Transaction_Student">
+    <End Role="Student" Type="AdmissionModel.Store.Student" Multiplicity="1" />
+    <End Role="Transaction" Type="AdmissionModel.Store.Transaction" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Student">
+        <PropertyRef Name="StudentId" />
+      </Principal>
+      <Dependent Role="Transaction">
+        <PropertyRef Name="StudentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

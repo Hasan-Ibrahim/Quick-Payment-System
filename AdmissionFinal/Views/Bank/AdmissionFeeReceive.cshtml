@@ -1,0 +1,66 @@
+﻿@model IEnumerable<AdmissionFinal.Models.StudentYearAmount>
+
+@{
+    ViewBag.Title = "AdmissionFeeReceive";
+}
+
+<div class="page-header">
+    <h2>AdmissionFeeReceive</h2>
+    
+    @using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Account creation was unsuccessful. Please correct the errors and try again.")
+    <p>
+        Name of Student : @Html.TextBox("searchString")  
+        <input type="submit" value="Submit" />
+    </p>
+}
+
+</div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+                    <th>
+                        Student Name
+                    </th>
+                    <th>
+                        Registration Number
+                    </th>
+                    <th>
+                        Year
+                    </th>
+                    <th>
+                        Fine
+                    </th>
+                    <th>
+                        Total Amount
+                    </th>
+				</tr>
+			</thead>
+			<tbody>
+
+@foreach (var item in Model) {
+				<tr>
+					<td>
+						@item.StudentName
+					</td>
+					<td>
+						@item.RegistrationNumber
+					</td>
+                    <td>
+                        @item.Year
+                    </td>
+                    <td>
+                        @item.Fine
+                    </td>
+                    <td>
+                        @item.Amount
+                    </td>
+                    <td>
+                        @Html.ActionLink("Receive Admission Fee","AdmissionAmountReceived", new {id = item.StudentYearStatusId})
+                    </td>
+			</tr>
+}
+		</tbody>
+	</table>
+

@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AdmissionFinal.Entity.StudentYearStatu>
+
+@{
+    ViewBag.Title = "PromoteStudent";
+}
+
+<div class="page-header">
+    <h2>PromoteStudent</h2>
+    
+    @using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true, "Account creation was unsuccessful. Please correct the errors and try again.")
+    <p>
+         Find Student by Year : @Html.TextBox("i")  
+        <input type="submit" value="Submit" />
+    </p>
+}
+
+</div>
+		<table class="table table-striped">
+			<thead>
+				<tr>
+                    <th>
+                        Student Name
+                    </th>
+                    <th>
+                        Registration Number
+                    </th>
+					<th>
+						Year
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+
+@foreach (var item in Model) {
+				<tr>
+					
+                    <td>
+                        @item.Student.Name
+                    </td>
+                    <td>
+                        @item.Student.RegistrationNumber
+                    </td>
+                    <td>
+                        @item.Year
+                    </td>
+                    
+                    <td>
+                        @Html.ActionLink("Promote","Promote", new {id = item.StudentYearStatusId}) |
+                        @Html.ActionLink("Re Add", "ReAdd", new { id = item.StudentYearStatusId })
+					</td>
+                </tr>
+}
+		</tbody>
+	</table>
+

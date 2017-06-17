@@ -1,0 +1,89 @@
+﻿@model AdmissionFinal.Entity.AdmissionFee
+
+@{
+    ViewBag.Title = "AdmissionFeeIndex";
+    
+}
+
+<div class="page-header">
+    <h2>Admission Fee</h2>
+</div>
+
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					<th>
+						Registration Fee
+					</th>
+					<th>
+						Tution Fee
+					</th>
+					<th>
+						Transport Fee
+					</th>
+					<th>
+						Sports Fee
+					</th>
+					<th>
+						Hall Union Fee
+					</th>
+					<th>
+						Student Welfare Fee
+					</th>
+					<th>
+						Development Fee
+					</th>
+					<th>
+						Others Fee
+					</th>
+					<th>
+						Last Date
+					</th>
+					<th>
+						Total Amount
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+
+
+				<tr>
+					
+					<td>
+						@String.Format("{0:F}", Model.RegistrationFee)
+					</td>
+					<td>
+						@String.Format("{0:F}", Model.TutionFee)
+					</td>
+					<td>
+						@String.Format("{0:F}", Model.TransportFee)
+					</td>
+					<td>
+						@String.Format("{0:F}", Model.SportsFee)
+					</td>
+					<td>
+						@String.Format("{0:F}", Model.HallUnionFee)
+					</td>
+					<td>
+						@String.Format("{0:F}", Model.StudentWelfareFee)
+					</td>
+					<td>
+						@String.Format("{0:F}", Model.DevelopmentFee)
+					</td>
+					<td>
+						@String.Format("{0:F}", Model.OthersFee)
+					</td>
+					<td>
+						@Model.LastDate.Date.ToString("dd MMM yyyy")
+					</td>
+                    <td>
+                        @String.Format("{0:F}", Model.Total)
+                    </td>
+                    <td>
+						@Html.ActionLink("Edit", "AdmissionFeeEdit", new { id=Model.AdmissionFeeId }) 
+					</td>
+                </tr>
+
+		</tbody>
+	</table>
+

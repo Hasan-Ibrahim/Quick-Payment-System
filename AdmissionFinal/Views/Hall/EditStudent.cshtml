@@ -1,0 +1,144 @@
+﻿@model AdmissionFinal.Entity.Student
+
+@{
+    ViewBag.Title = "EditStudent";
+}
+<div class="page-header">
+	<h2>EditStudent</h2>
+</div>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+	@using (Html.BeginForm()) {
+		@Html.ValidationSummary(true)
+		<fieldset>
+			<legend>Student</legend>
+			<div class="control-group">
+				<div class="controls">
+					@Html.HiddenFor(model => model.StudentId)
+				</div>
+			</div>
+			<div class="control-group">
+				@Html.LabelFor(model => model.Name)
+				<div class="controls">
+					@Html.EditorFor(model => model.Name)
+					@Html.ValidationMessageFor(model => model.Name)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.FatherName)
+				<div class="controls">
+					@Html.EditorFor(model => model.FatherName)
+					@Html.ValidationMessageFor(model => model.FatherName)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.MotherName)
+				<div class="controls">
+					@Html.EditorFor(model => model.MotherName)
+					@Html.ValidationMessageFor(model => model.MotherName)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.CurrentAddress)
+				<div class="controls">
+					@Html.EditorFor(model => model.CurrentAddress)
+					@Html.ValidationMessageFor(model => model.CurrentAddress)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.PermanentAddress)
+				<div class="controls">
+					@Html.EditorFor(model => model.PermanentAddress)
+					@Html.ValidationMessageFor(model => model.PermanentAddress)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.ContactNumber)
+				<div class="controls">
+					@Html.EditorFor(model => model.ContactNumber)
+					@Html.ValidationMessageFor(model => model.ContactNumber)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.SSCYear)
+				<div class="controls">
+					@Html.EditorFor(model => model.SSCYear)
+					@Html.ValidationMessageFor(model => model.SSCYear)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.HSCYear)
+				<div class="controls">
+					@Html.EditorFor(model => model.HSCYear)
+					@Html.ValidationMessageFor(model => model.HSCYear)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.SSCGPA)
+				<div class="controls">
+					@Html.EditorFor(model => model.SSCGPA)
+					@Html.ValidationMessageFor(model => model.SSCGPA)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.HSCGPA)
+				<div class="controls">
+					@Html.EditorFor(model => model.HSCGPA)
+					@Html.ValidationMessageFor(model => model.HSCGPA)
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					@Html.HiddenFor(model => model.Session)
+				</div>
+			</div>
+
+			<div class="control-group">
+				@Html.LabelFor(model => model.DepartmentId)
+				<div class="controls">
+					@Html.DropDownList("DepartmentId", String.Empty)
+					@Html.ValidationMessageFor(model => model.DepartmentId)
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					@Html.HiddenFor(model => model.HallId)
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					@Html.HiddenFor(model => model.UserId)
+				</div>
+			</div>
+
+			<div class="control-group">
+				<div class="controls">
+					@Html.HiddenFor(model => model.RegistrationNumber)
+				</div>
+			</div>
+
+		<div class="form-actions">
+				<input type="submit" class="btn btn-primary" value="Submit" />
+		</div>
+	</fieldset>
+    
+}
+
+<div>
+	@Html.ActionLink("Back to List", "Index")
+</div>
+

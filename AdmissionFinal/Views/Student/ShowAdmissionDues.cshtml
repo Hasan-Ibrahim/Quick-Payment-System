@@ -1,0 +1,77 @@
+﻿@model AdmissionFinal.Entity.AdmissionFee
+
+@{
+    ViewBag.Title = "ShowDues";
+    decimal fine = ViewBag.Fine;
+    decimal total = (decimal) (Model.Total + fine);
+}
+
+<div class="page-header">
+	<h2>ShowDues</h2>
+</div>
+
+		<fieldset>
+			<legend>AdmissionFee</legend>
+			<br />
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.RegistrationFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.RegistrationFee)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.TutionFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.TutionFee)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.TransportFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.TransportFee)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.SportsFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.SportsFee)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.HallUnionFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.HallUnionFee)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.StudentWelfareFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.StudentWelfareFee)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.DevelopmentFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.DevelopmentFee)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.OthersFee)</div>
+                <div class="span10">@Html.DisplayFor(model => model.OthersFee)</div>
+            </div>
+
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.LastDate)</div>
+                <div class="span10">@Html.DisplayFor(model => model.LastDate)</div>
+            </div>
+             <div class="row">
+                <div class="span2">Fine</div>
+                <div class="span10">@fine</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.Total)</div>
+                <div class="span10">@total</div>
+            </div>
+		</fieldset>
+		<br />
+	<p>
+		@Html.ActionLink("Back to Home", "Index")
+	</p>
+
+

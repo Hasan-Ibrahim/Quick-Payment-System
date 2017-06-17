@@ -1,0 +1,58 @@
+﻿@model AdmissionFinal.Entity.ExamFee
+
+@{
+    ViewBag.Title = "ExamFeeIndex";
+}
+
+<div class="page-header">
+	<h2>Exam Fee</h2>
+</div>
+		
+		<table class="table table-striped">
+			<thead>
+				<tr>
+					
+					<th>
+						Exam Fee
+					</th>
+					<th>
+						Centre Fee
+					</th>
+					<th>
+						Transcript Fee
+					</th>
+					<th>
+						Last Date
+					</th>
+					<th>
+						Total
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+
+				<tr>
+					
+					<td>
+						@String.Format("{0:F}", Model.ExamFee1)
+					</td>
+					<td>
+						@String.Format("{0:F}", Model.CentreFee)
+					</td>
+					<td>
+						@String.Format("{0:F}", Model.TranscriptFee)
+					</td>
+					<td>
+						@Model.LastDate.Date.ToString("dd MMM yyyy")
+					</td>
+                    <td>
+                        @String.Format("{0:F}", Model.Total)
+                    </td>
+                    <td>
+						@Html.ActionLink("Edit", "ExamFeeEdit", new { id = Model.ExamFeeId })
+						
+					</td>
+			</tr>
+		</tbody>
+	</table>
+

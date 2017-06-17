@@ -1,0 +1,86 @@
+﻿@model AdmissionFinal.Entity.Student
+
+@{
+    ViewBag.Title = "StudentDetails";
+}
+
+<div class="page-header">
+	<h2>@User.Identity.Name</h2>
+</div>
+
+		<fieldset>
+			<legend>Details Of @Model.Name</legend>
+			<br />
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.Name)</div>
+                <div class="span10">@Html.DisplayFor(model => model.Name)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.FatherName)</div>
+                <div class="span10">@Html.DisplayFor(model => model.FatherName)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.MotherName)</div>
+                <div class="span10">@Html.DisplayFor(model => model.MotherName)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.CurrentAddress)</div>
+                <div class="span10">@Html.DisplayFor(model => model.CurrentAddress)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.PermanentAddress)</div>
+                <div class="span10">@Html.DisplayFor(model => model.PermanentAddress)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.ContactNumber)</div>
+                <div class="span10">@Html.DisplayFor(model => model.ContactNumber)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.SSCYear)</div>
+                <div class="span10">@Html.DisplayFor(model => model.SSCYear)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.HSCYear)</div>
+                <div class="span10">@Html.DisplayFor(model => model.HSCYear)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.SSCGPA)</div>
+                <div class="span10">@Html.DisplayFor(model => model.SSCGPA)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.HSCGPA)</div>
+                <div class="span10">@Html.DisplayFor(model => model.HSCGPA)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.Session)</div>
+                <div class="span10">@Html.DisplayFor(model => model.Session)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.Department.DepartmentName)</div>
+                <div class="span10">@Html.DisplayFor(model => model.Department.DepartmentName)</div>
+            </div>
+
+            <div class="row">
+                <div class="span2">@Html.LabelFor(model => model.RegistrationNumber)</div>
+                <div class="span10">@Html.DisplayFor(model => model.RegistrationNumber)</div>
+            </div>
+		</fieldset>
+		<br />
+	<p>
+		@Html.ActionLink("Edit", "EditStudent", new { id=Model.StudentId }) |
+		@Html.ActionLink("Back to List", "ShowStudentsIndex")
+	</p>
+</div>
+

@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" type="text/css"/>
+    <link href="@Url.Content("~/Content/bootstrap-overrides.css")" rel="stylesheet" type="text/css"/>
+    <script src="@Url.Content("~/Scripts/jquery-1.7.1.min.js")" type="text/javascript"></script>
+    <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
+</head>
+<body>
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                @Html.ActionLink("Quick Pay","Index", "Home", new { @class = "brand" })
+                <div class="nav-collapse">
+                    <ul class="nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li>@Html.ActionLink("Register", "Register", "Account")</li>
+                        }
+                        else if (User.IsInRole("Hall"))
+                        {
+                            <li>@Html.ActionLink("Register Students", "Register", "Account")</li> 
+                            <li>@Html.ActionLink("Show Student List", "ShowStudentsIndex", "Hall")</li>
+                            
+                            <li>@Html.ActionLink("View Admission Fee", "AdmissionFeeIndex", "Hall")</li>
+                            
+                            <li>
+                                @Html.ActionLink("View Exam Fee", "ExamFeeIndex", "Hall")
+                            </li>
+                        }
+                        else if (User.IsInRole("Department"))
+                        {
+                            
+                            <li>@Html.ActionLink("Promote Students", "PromoteStudent", "Department")</li>
+                            <li>@Html.ActionLink("View Student Information", "ViewStudentInformation", "Department")</li>
+                            
+                            
+                        }
+                        else if (User.IsInRole("Student"))
+                        {
+                            <li>@Html.ActionLink("Show My Info", "ShowInfo", "Student")</li>
+                            
+                            <li>@Html.ActionLink("Show My Dues", "ShowDues", "Student")</li>
+                        }
+                        else if (User.IsInRole("Bank"))
+                        {
+                            <li>@Html.ActionLink("Admission Fee Receive", "AdmissionFeeReceive", "Bank")</li>
+                            <li>@Html.ActionLink("Exam Fee Receive", "ExamFeeReceive", "Bank")</li>
+                            <li>@Html.ActionLink("View Transactions", "ViewTransactions", "Bank")</li>
+                            
+                            
+                            
+                        }
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li>@Html.Partial("_LogOnPartial")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+    </div>
+    <footer>
+        </footer>
+</body>
+</html>
